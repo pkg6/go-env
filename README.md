@@ -13,7 +13,7 @@ There is test coverage and CI for both linuxish and Windows environments, but I 
 As a library
 
 ```shell
-go get github.com/pkg6/go-env
+go get github.com/pkg6/goenv
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/pkg6/go-env"
+	"github.com/pkg6/goenv"
 	"os"
 )
 

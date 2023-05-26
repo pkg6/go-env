@@ -1,3 +1,3 @@
-module github.com/pkg6/go-env
+module github.com/pkg6/goenv
 
 go 1.18

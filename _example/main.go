@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/pkg6/go-env"
+	"github.com/pkg6/goenv"
 	"os"
 )
 
