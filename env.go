@@ -1,6 +1,7 @@
 package goenv
 
 import (
+	"encoding/json"
 	"os"
 )
 
@@ -47,6 +48,14 @@ func GetDefault(key, defaultVal string) string {
 		return val
 	}
 	return defaultVal
+}
+
+func JsonUnmarshal(v any) error {
+	marshal, err := json.Marshal(knownEnvVars)
+	if err != nil {
+		return err
+	}
+	return json.Unmarshal(marshal, v)
 }
 
 // Clear envs
