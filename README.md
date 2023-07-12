@@ -36,13 +36,21 @@ import (
 	"os"
 )
 
+type Config struct {
+	AccessKeyId     string `json:"AccessKeyId"`
+	AccessKeySecret string `json:"AccessKeySecret"`
+}
+
 func main() {
 	goenv.Load()
 	AccessKeyId := os.Getenv("AccessKeyId")
 	AccessKeySecret := os.Getenv("AccessKeySecret")
 	fmt.Println(AccessKeyId, AccessKeySecret)
-	// now do something with aliyun or whatever
+	c := new(Config)
+	goenv.JsonUnmarshal(c)
+	fmt.Println(c)
 }
+
 ```
 
 ## Contributing
